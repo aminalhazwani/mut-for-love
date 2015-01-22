@@ -1,0 +1,7 @@
+footer {
+	background-color: $blue;
+	color: $white;
+	@include font-smooth();
+
+	padding: 1rem;
+}

@@ -1,0 +1,32 @@
+header {
+	box-sizing: border-box;
+	padding: 2rem;
+
+	background-color: $red;
+	color: $white;
+	@include font-smooth();
+}
+
+header {
+	h1 {
+		span {
+			font-family: $helvetica;
+			font-weight: bold;
+		}
+	}
+}
+
+.header {
+	@include e(intro) {
+		@include m(title) {
+			margin-bottom: 1rem;
+		}
+		@include m(text) {
+			margin-bottom: 1rem;
+		}
+		@include m(signature) {
+			margin-bottom: 1rem;
+		}
+		@include m(colophone) {}
+	}
+}
