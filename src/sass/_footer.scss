@@ -3,5 +3,27 @@ footer {
 	color: $white;
 	@include font-smooth();
 
-	padding: 1rem;
+	padding: 2rem 2rem 1rem 2rem;
+}
+
+footer {
+	p {
+		a {
+			color: $white;
+			text-decoration: none;
+			border-bottom: 1px solid $white;
+		}
+	}
+}
+
+.footer {
+	@include e(legal) {
+		margin-bottom: 1rem;
+	}
+	@include e(author) {}
+	@include e(design) {}
+	@include e(coding) {
+		margin-bottom: 1rem;
+	}
+	@include e(copyright) {}
 }

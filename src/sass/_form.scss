@@ -22,13 +22,19 @@ textarea {
 button {
 	display: block;
 	box-sizing: border-box;
+	outline: none;
 	border: none;
 	width: calc(100% - 2rem);
-	margin: 0 auto;
+	margin: 0 auto 2rem auto;
 	padding: 1rem;
 
 	background-color: $white;
 	color: $red;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	&:focus {
+
+	}
 }
 
 .hide {

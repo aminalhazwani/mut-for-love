@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css">
     </head>
-    <body>
+    <body style="max-width:320px">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -30,14 +30,14 @@
             <div class="hide">
                 Please, leave this field blank: <input type="text" name="email" />
             </div>
-		    <button type="submit">SEND YOUR <br>(secret)<br> LOVE LETTER</button>
+		    <button type="submit">SEND YOUR<br> (secret) <br>LOVE LETTER</button>
 		</form>
         <footer>
-            <p>Legal Note – Note Legali – rechtliche Hinweise</p>
-            <p>Project by Studio Mut  for Museion</p>
-            <p>Design: Studio Mut. Martin Kerschbaumer, Thomas Kronbichler</p>
-            <p>Coding: Amin Al Hazwani</p>
-            <p>© 2015 Studio Mut</p>    
+            <p class="footer__legal"><a href="#">Legal Note – Note Legali – rechtliche Hinweise</a></p>
+            <p class="footer__author">Project by Studio Mut  for Museion</p>
+            <p class="footer__design">Design: <a href="http://studiomut.com">Studio Mut</a>. Martin Kerschbaumer, Thomas Kronbichler</p>
+            <p class="footer__coding">Coding: <a href="http://aminalhazwani.com">Amin Al Hazwani</a></p>
+            <p class="footer__copyright">© 2015 Studio Mut</p>    
         </footer>
     </body>
 </html>
