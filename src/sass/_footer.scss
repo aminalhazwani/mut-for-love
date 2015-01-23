@@ -1,9 +1,11 @@
 footer {
-	background-color: $blue;
+	background-color: $grey;
 	color: $white;
 	@include font-smooth();
 
-	padding: 2rem 2rem 1rem 2rem;
+	padding: 2rem 1rem 1rem 1rem;
+	text-align: center;
+	font-size: smaller;
 }
 
 footer {
@@ -20,8 +22,12 @@ footer {
 	@include e(legal) {
 		margin-bottom: 1rem;
 	}
-	@include e(author) {}
-	@include e(design) {}
+	@include e(author) {
+		margin-bottom: .25rem;
+	}
+	@include e(design) {
+		margin-bottom: .25rem;
+	}
 	@include e(coding) {
 		margin-bottom: 1rem;
 	}

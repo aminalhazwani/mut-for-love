@@ -7,3 +7,17 @@ $times: Times, 'Times New Roman', Georgia, serif;
 $red: #fc0d1b;
 $blue: #0b24fb;
 $white: #fff;
+$grey: #4d4d4d;
+
+// Breakpoints
+$tabl-start:        	481px;
+$lap-start:         	768px;
+$desk-start:        	1024px;
+$desk-wide-start:   	1200px;
+$desk-super-wide-start: 1680px;
+$palm-end:     			$tabl-start - 1px;
+$tabl-end:     			$lap-start - 1px;
+$lap-end:      			$desk-start;
+
+// Transition
+$bezier: cubic-bezier(.55, 0, .1, 1);

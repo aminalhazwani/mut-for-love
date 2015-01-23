@@ -1,32 +1,82 @@
+.wrapper {
+	height: 100vh;
+}
+
 header {
 	box-sizing: border-box;
-	padding: 2rem;
+	padding: 1rem 2rem 1rem 2rem;
 
 	background-color: $red;
 	color: $white;
 	@include font-smooth();
-}
 
-header {
-	h1 {
-		span {
-			font-family: $helvetica;
-			font-weight: bold;
-		}
+	@include media-query(tabl){
+		font-size: 1.25em;
+		padding: 1rem 3rem 1rem 3rem;
+	}
+	@include media-query(lap){
+		font-size: 1.5em;
+		padding: 2rem 4rem 2rem 4rem;
+	}
+	@include media-query(desk){
+		font-size: 2em;
+		padding: 3rem 6rem 3rem 6rem;
 	}
 }
 
 .header {
 	@include e(intro) {
+		overflow: hidden;
+
 		@include m(title) {
-			margin-bottom: 1rem;
+			display: inline-block;
+			vertical-align: middle;
+			width: calc(100% - 4px - 40px);
+			@include media-query(tabl){
+				width: calc(100% - 4px - 46px);
+			}
+			@include media-query(lap){
+				width: calc(100% - 4px - 52px);
+			}
+			@include media-query(desk){
+				width: calc(100% - 4px - 63px);
+			}
+			span {
+				font-family: $helvetica;
+				font-weight: bold;
+			}
 		}
-		@include m(text) {
-			margin-bottom: 1rem;
+
+		@include m(help) {
+			display: inline-block;
+			vertical-align: middle;
+			width: 40px;
+			height: 40px;
+
+			background-color: $white;
+			color: $red;
+
+			text-decoration: none;
+			text-align: center;
+			font-size: 1.25em;
+			line-height: 40px;
+			border-radius: 50%;
+
+			@include media-query(tabl){
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+			}
+			@include media-query(lap){
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+			}
+			@include media-query(desk){
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+			}
 		}
-		@include m(signature) {
-			margin-bottom: 1rem;
-		}
-		@include m(colophone) {}
 	}
 }
