@@ -62,6 +62,10 @@ textarea {
     @include media-query(desk-super-wide) {
     	font-size: 5em;
     }
+
+    &::selection {
+    	background: $red;
+    }
 }
 
 button {
