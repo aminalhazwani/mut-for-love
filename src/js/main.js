@@ -13,8 +13,4 @@ $(function() {
   });
 });
 
-function windowH() {
-   var wH = $(window).height();
-   $('.wrapper').css({height: wH});
-}
-windowH();
+$('textarea').val('');
