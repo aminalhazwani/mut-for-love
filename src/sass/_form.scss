@@ -8,10 +8,10 @@ form {
 		height: calc(100% - 77px + 1.5rem);
 		padding-bottom: 1.5rem;
 	}
-	@include media-query(lap) {
+	@include media-query(lap-and-up) {
 		height: calc(100% - 114px + 1rem);
 	}
-	@include media-query(desk) {
+	@include media-query(desk-super-wide) {
 		height: calc(100% - 157px + 1rem);
 	}
 }
@@ -34,33 +34,31 @@ textarea {
     height: calc(100% - 92px - 2rem);
 
     font-family: $times;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.2;
-    @include media-query(tabl-and-up) {
-    	font-size: 2em;
+    @include media-query(tabl) {
+    	font-size: 3em;
     	width: calc(100% - 3rem);
     	height: calc(100% - 57px - 3rem);
     	margin-bottom: 1.5rem;
     	padding: 1.5rem;
     }
-    @include media-query(lap) {
+    @include media-query(lap-and-up) {
     	width: calc(100% - 4rem);
     	height: calc(100% - 94px - 4rem);
     	margin-bottom: 2rem;
     	padding: 2rem;
-    }
-    @include media-query(desk) {
-    	width: calc(100% - 6rem);
-    	height: calc(100% - 135px - 6rem);
-    	margin-bottom: 3rem;
-    	font-size: 3em;
-    	padding: 3rem;
+    	font-size: 4em;
     }
     @include media-query(desk-wide) {
     	font-size: 4em;
     }
     @include media-query(desk-super-wide) {
+    	width: calc(100% - 6rem);
+    	height: calc(100% - 135px - 6rem);
+    	margin-bottom: 3rem;
     	font-size: 5em;
+    	padding: 3rem;
     }
 
     &::selection {
@@ -93,12 +91,12 @@ button {
 			display: none;
 		}
 	}
-	@include media-query(lap){
+	@include media-query(lap-and-up){
 		width: calc(100% - 4rem);
 		font-size: 1.5em;
 		padding: 2rem;
 	}
-	@include media-query(desk){
+	@include media-query(desk-super-wide){
 		width: calc(100% - 6rem);
 		font-size: 2em;
 		padding: 3rem;
