@@ -25,6 +25,10 @@
 			margin-bottom: 1rem;
 			text-align: center;
 
+			span {
+				font-family: $helvetica;
+			}
+
 			@include media-query(lap-and-up) {
 				text-align: left;
 			}
