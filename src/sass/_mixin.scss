@@ -46,4 +46,7 @@
     @if $media-query == desk-wide{
       @media only screen and (min-width: $desk-wide-start) { @content; }
     }
+    @if $media-query == desk-super-wide{
+      @media only screen and (min-width: $desk-super-wide-start) { @content; }
+    }
 }
