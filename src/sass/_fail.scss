@@ -1,0 +1,44 @@
+.fail {
+	min-height: 100%;
+	background-color: $red;
+	padding: 2rem;
+	@include media-query(tabl){
+		font-size: 1.25em;
+		padding: 2rem 3rem 2rem 3rem;
+	}
+	@include media-query(lap-and-up){
+		font-size: 1.5em;
+		padding: 3rem 4rem 3rem 4rem;
+	}
+	@include media-query(desk-super-wide){
+		font-size: 2em;
+		padding: 4rem 6rem 4rem 6rem;
+	}
+
+	@include e(title) {
+		color: $white;
+		@include font-smooth();
+		display: block;
+		line-height: 1.2;
+		margin-bottom: 3rem;
+
+		@include media-query(tabl-and-up) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	@include e(text) {
+		color: $white;
+		@include font-smooth();
+
+		@include m(link) {
+			color: $white;
+			text-decoration: none;
+			border-bottom: 2px solid $white;
+
+			@include media-query(tabl-and-up) {
+				border-bottom: 3px solid $white;
+			}
+		}
+	}
+}
