@@ -12,7 +12,8 @@
         <title>Letter submitted</title>
         <?php endif ?>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -59,10 +60,19 @@
             // create email headers
             @mail($email_to, $email_subject, $email_message);  
         ?>
+        <div class="success">
+            <h1 class="success__title">Thank You <span>×</span> sharing the love</h1>
+            <h1 class="success__title">Tausend <span>×</span> Dank für die Liebe</h1>
+            <h1 class="success__title">Grazie <span>×</span> le tue parole d&#8217;amore</h1>
+    		<p class="success__text">Your submitted lovely letter is:</p> 
+    		<p class="success__letter"><?php echo $_POST["letter"]; ?></p>
 
-        <h1>Thank you for sharing some ♥ with us!</h1>
-		<p>Your submitted lovely letter is:</p> 
-		<p><?php echo $_POST["letter"]; ?></p>
+            <div class="success__footer">
+                <p class="success__footer--text">See you on the <a href="#">Museion Talvera Side on August 6th</a></p>
+                <p class="success__footer--text">Bis Balt, wir sehen uns <a href="#">am 6. August vorm Museion</a></p>
+                <p class="success__footer--text">Ci vediamo il <a href="#">6 agosto al Museion</a></p>
+            </div>
+        </div>
     </body>
 </html>
 
