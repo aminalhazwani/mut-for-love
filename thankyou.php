@@ -6,13 +6,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <?php if(strlen($letter) < 1): ?>
-        <title>Love error</title>
-        <?php else: ?>
-        <title>Letter submitted</title>
-        <?php endif ?>
+        <title>Mut × Love</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
         <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css">
     </head>
     <body>
@@ -21,7 +18,7 @@
         <![endif]-->
         <?php
             if(isset($_POST['letter'])) {
-                $email_to = "";
+                $email_to = "love@studiomut.com";
                 $email_subject = "Your love letter";
             
             function died($error) {
@@ -38,7 +35,7 @@
             $error_message = "";
          
             if(strlen($letter) < 1) {
-                $error_message .= 'The submitted letter is too short :-(<br>Please go back and write some more love!<br><br>';
+                $error_message .= '<div class="fail"><h1 class="fail__title">The submitted letter is too short :-(</h1><h3 class="fail__text">Please <a class="fail__text--link" href="/">go back</a> and write more love!<h3></div>';
             }
 
             if(strlen($mail) != 0) {
