@@ -12,7 +12,7 @@ form {
 		height: calc(100% - 114px + 1rem);
 	}
 	@include media-query(desk-super-wide) {
-		height: calc(100% - 157px + 1rem);
+		height: calc(100% - 157px);
 	}
 }
 
