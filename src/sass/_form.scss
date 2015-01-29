@@ -3,16 +3,16 @@ form {
 	padding-bottom: 1rem;
 	box-sizing: border-box;
 
-	height: calc(100% - 72px + 1rem);
+	height: calc(100% - 72px + 2rem);
 	@include media-query(tabl) {
-		height: calc(100% - 77px + 1.5rem);
+		height: calc(100% - 77px + 2.5rem);
 		padding-bottom: 1.5rem;
 	}
 	@include media-query(lap-and-up) {
-		height: calc(100% - 114px + 1rem);
+		height: calc(100% - 114px + 2rem);
 	}
 	@include media-query(desk-super-wide) {
-		height: calc(100% - 157px);
+		height: calc(100% - 157px + 1rem);
 	}
 }
 
@@ -27,7 +27,7 @@ textarea {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1rem auto;
     padding: 1rem;
  
     width: calc(100% - 2rem);
@@ -36,17 +36,20 @@ textarea {
     font-family: $times;
     font-size: 2em;
     line-height: 1.2;
+
+    transition: all 0.3s $bezier;
+    
     @include media-query(tabl) {
     	font-size: 3em;
     	width: calc(100% - 3rem);
     	height: calc(100% - 57px - 4rem);
-    	margin-bottom: 2.5rem;
+    	margin-bottom: 1.5rem;
     	padding: 1.5rem;
     }
     @include media-query(lap-and-up) {
     	width: calc(100% - 4rem);
     	height: calc(100% - 94px - 5rem);
-    	margin-bottom: 3rem;
+    	margin-bottom: 2rem;
     	padding: 2rem;
     	font-size: 4em;
     }
@@ -56,7 +59,7 @@ textarea {
     @include media-query(desk-super-wide) {
     	width: calc(100% - 6rem);
     	height: calc(100% - 135px - 6rem);
-    	margin-bottom: 4rem;
+    	margin-bottom: 3rem;
     	font-size: 6em;
     	padding: 3rem;
     }
@@ -67,19 +70,24 @@ textarea {
 }
 
 button {
+	position: relative;
+	outline: none;
 	display: block;
+	overflow: hidden;
 	box-sizing: border-box;
 	outline: none;
 	border: none;
 	width: calc(100% - 2rem);
 	margin: 0 auto;
-	padding: 0;
+	padding: 1rem;
 
-	background-color: transparent;
+	background-color: $white;
 	color: $red;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-appearance: none;
     -webkit-border-radius: 0;
+
+    transition: all 0.3s $bezier;
 
 	@include media-query(tabl){
 		width: calc(100% - 3rem);
@@ -93,67 +101,51 @@ button {
 	@include media-query(lap-and-up){
 		width: calc(100% - 4rem);
 		font-size: 1.5em;
+		padding: 2rem;
 	}
 	@include media-query(desk-super-wide){
 		width: calc(100% - 6rem);
 		font-size: 2em;
+		padding: 3rem;
 	}
 }
 
 button {
-	perspective: 1000px;
 	p {
-		position: relative;
-		background-color: $white;
-		display: block;
-		padding: 1rem;
-		@include media-query(tabl) {
-			padding: 1rem;
-		}
-		@include media-query(lap-and-up) {
-			padding: 2rem;
-		}
-		@include media-query(desk-super-wide) {
-			padding: 3rem;
-		}
-		transition: transform 0.3s;
-		transform-origin: 50% 0;
-		transform-style: preserve-3d;
-		&:before {
-			content: "♥";
-			position: absolute;
-			font-size: 2em;
-			line-height: 90px;
-			top: 100%;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: $white;
-			color: $red;
-			transition: background 0.3s;
-			transform: rotateX(-90deg);
-			transform-origin: 50% 0;
-			@include media-query(tabl) {
-				line-height: 55px;
-			}
-			@include media-query(lap-and-up) {
-				line-height: 92px;
-			}
-			@include media-query(desk-super-wide) {
-				line-height: 135px;
-			}
-		}
+		transition: all 0.3s $bezier;
 	}
-	
+
+	&:before {
+		content: '♥';
+		font-size: 2em;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		transform: translateY(-55%);
+		left: -100%;
+		transition: all 0.3s $bezier;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		transition: all 0.3s $bezier;
+	}
+}
+
+button {
 	&:hover {
+		transition: all 0.3s $bezier;
+
 		p {
-			transform: rotateX(90deg) translateY(-100%);
-			&:before {
-				background-color: $white;
-			}
-			&:focus {
-				background-color: $white;	
-			}		
+			transform: translateX(300%);
+			transition: all 0.3s $bezier;
+		}
+
+		&:before {
+			left: 0;
+			transition: all 0.3s $bezier;
 		}
 	}
 }
