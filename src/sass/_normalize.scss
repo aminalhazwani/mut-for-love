@@ -159,17 +159,20 @@ a {
 @if $normalize_headings == true {
     h1 {
         font-size: $h1_font_size;
+        font-weight: 500;
         margin: 0;
     }
 
     h2 {
         font-size: $h2_font_size;
         margin: 0;
+        font-weight: 500;
     }
 
     h3 {
         font-size: $h3_font_size;
         margin: $h3_margin;
+        font-weight: 500;
     }
 
     h4 {
