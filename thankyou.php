@@ -58,16 +58,16 @@
             @mail($email_to, $email_subject, $email_message);  
         ?>
         <div class="success">
-            <h1 class="success__title">Thank You <span>×</span> sharing the love</h1>
             <h1 class="success__title">Tausend <span>×</span> Dank für die Liebe</h1>
             <h1 class="success__title">Grazie <span>×</span> le tue parole d&#8217;amore</h1>
-    		<p class="success__text">Your submitted lovely letter is:</p> 
+            <h1 class="success__title">Thank You <span>×</span> sharing the love</h1>
+    		<p class="success__text">Dein Brief / Your letter / La tua lettera:</p> 
     		<p class="success__letter"><?php echo $_POST["letter"]; ?></p>
 
             <div class="success__footer">
-                <p class="success__footer--text">See you on the <a href="#">Museion Talvera Side on August 6th</a></p>
-                <p class="success__footer--text">Bis Balt, wir sehen uns <a href="#">am 6. August vorm Museion</a></p>
-                <p class="success__footer--text">Ci vediamo il <a href="#">6 agosto al Museion</a></p>
+                <p class="success__footer--text">Bis Balt, beim Museion im August!</p>
+                <p class="success__footer--text">Ci vediamo in agosto al Museion!</p>
+                <p class="success__footer--text">See you at Museion in August!</p>
             </div>
         </div>
     </body>
