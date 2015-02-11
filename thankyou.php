@@ -61,11 +61,11 @@
             <h1 class="success__title">Tausend <span>×</span> Dank für die Liebe</h1>
             <h1 class="success__title">Grazie <span>×</span> le tue parole d&#8217;amore</h1>
             <h1 class="success__title">Thank You <span>×</span> sharing the love</h1>
-    		<p class="success__text">Dein Brief / Your letter / La tua lettera:</p> 
+    		<p class="success__text">dein Brief <span>×</span> la tua lettera <span>×</span> your letter</p> 
     		<p class="success__letter"><?php echo $_POST["letter"]; ?></p>
 
             <div class="success__footer">
-                <p class="success__footer--text">Bis Balt, beim Museion im August!</p>
+                <p class="success__footer--text">Bis bald, beim Museion im August!</p>
                 <p class="success__footer--text">Ci vediamo in agosto al Museion!</p>
                 <p class="success__footer--text">See you at Museion in August!</p>
             </div>
