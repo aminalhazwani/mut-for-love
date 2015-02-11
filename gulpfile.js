@@ -12,11 +12,7 @@ var gulp = require('gulp'),
 
 // gulp styles task
 gulp.task('styles', function() {
-  return gulp.src('src/sass/main.scss')
-    .pipe(sass({ 
-        style: 'expanded', 
-        "sourcemap=none": true
-    }))
+  return sass('src/sass/main.scss')
     .pipe(autoprefixer())
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
@@ -38,12 +34,6 @@ gulp.task('scripts', function() {
 gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['styles']);
     gulp.watch('src/js/*.js', ['scripts']);
-
-    // var server = livereload();
-    // gulp.watch(['src/**']).on('change', function(file) {
-    // server.changed(file.path);
-    // });
-
     gulp.start('styles', 'scripts');
 });
 
