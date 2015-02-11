@@ -37,9 +37,11 @@
 			margin-bottom: 1rem;
 		}
 		@include m(signature) {
-			margin-bottom: 1rem;
+			
 		}
-		@include m(colophone) {}
+		@include m(colophone) {
+
+		}
 
 		@include media-query(lap-and-up) {
 			width: calc(100% / 3);
