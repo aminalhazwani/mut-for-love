@@ -3,6 +3,12 @@
 	background-color: $red;
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:portrait) { 
+	.wrapper {
+		height: 442px;
+	}
+}
+
 header {
 	box-sizing: border-box;
 	padding: 1rem 2rem 1rem 2rem;

@@ -12,8 +12,14 @@ var gulp = require('gulp'),
 
 // gulp styles task
 gulp.task('styles', function() {
-  return sass('src/sass/main.scss')
-    .pipe(autoprefixer())
+    return sass('src/sass/main.scss', { sourcemap: false }) 
+        .on('error', function (err) {
+        console.error('Error!', err.message);
+    })
+    .pipe(autoprefixer({
+        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
+        cascade: false
+    }))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('assets/styles'))
